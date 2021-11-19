@@ -1,9 +1,8 @@
 #include <cstdio>
 #include <cstdlib>
-#include <string>
 #include <ctime>
 
-int main(int argc, char* argv[])1
+int main(int argc, char* argv[])
 {
     if (argc < 3) {
 	fprintf(stderr, "Usage: genpass <num_of_passwords> <length_of_password>\n");
