@@ -15,13 +15,14 @@ int main(int argc, char* argv[])
     int num_of_passwords = atoi(argv[1]);
     int length_of_password = atoi(argv[2]);
 
-    if (length_of_password < 12) {
-	fprintf(stderr, "ERROR: Single password needs to be at least 12 characters long!\n");
+    if (output == nullptr) {
+	fprintf(stderr, "ERROR: Could not create \'passwords.txt\'\n");
 	exit(1);
     }
     
-    if (output == nullptr) {
-	fprintf(stderr, "ERROR: Could not create \'passwords.txt\'\n");
+    if (length_of_password < 12) {
+	fprintf(stderr, "ERROR: Single password needs to be at least 12 characters long!\n");
+	fclose(output);
 	exit(1);
     }
 
@@ -34,6 +35,7 @@ int main(int argc, char* argv[])
 	fprintf(output, "\n");
     }
 
+    fclose(output);
     printf("Done!\n");
     return 0;
 }
