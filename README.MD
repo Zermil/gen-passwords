@@ -3,6 +3,8 @@ Simple utility program that generates random passwords. It accepts number of pas
 and length of a single password as it's second argument, then outputs randomly generated passwords to a text
 file 'passwords.txt'.
 
+Simpler description: Random string generator in C++
+
 ## Quick start
 Usage: ./genpass <num_of_passwords> <length_of_password>
 
